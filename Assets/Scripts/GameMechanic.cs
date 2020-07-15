@@ -39,12 +39,15 @@ public class GameMechanic : MonoBehaviour
     IEnumerator LoadSceneWait()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(gameLevels[ManagerScript.Instance.currentLevel+1]);
+        if(gameLevels[ManagerScript.Instance.currentLevel] != "Level_03")
+            SceneManager.LoadScene(gameLevels[ManagerScript.Instance.currentLevel+1]);
+        else
+            SceneManager.LoadScene("Menu");
     }
 
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("LabyrinthCube")){
-            move = false;
+            //move = false;
         }
     }
 
@@ -112,7 +115,7 @@ public class GameMechanic : MonoBehaviour
                 nextPoss = new Vector3(transform.position.x + 50f, transform.position.y, transform.position.z);
             break;
         }
-        transform.position = Vector3.MoveTowards(transform.position, nextPoss, Time.deltaTime * 225f);
+        transform.position = Vector3.MoveTowards(transform.position, nextPoss, Time.deltaTime * 400f);
     }
 
     /*

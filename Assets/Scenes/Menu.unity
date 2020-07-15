@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c875fd1d2e27a47b69cb47af832d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 
+  currentLevel: 0
 --- !u!1 &880900380
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 880900381}
   - component: {fileID: 880900384}
   - component: {fileID: 880900382}
+  - component: {fileID: 880900383}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -438,7 +439,7 @@ RectTransform:
   - {fileID: 1100358565}
   m_Father: {fileID: 1963737034}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.5200002}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -498,6 +499,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &880900383
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880900380}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 35861e2b198b3ec4797dd59f5b2cdb3f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 35861e2b198b3ec4797dd59f5b2cdb3f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!222 &880900384
 CanvasRenderer:
   m_ObjectHideFlags: 0
